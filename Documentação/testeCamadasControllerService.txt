@@ -1,9 +1,15 @@
-dar o comando no terminal 'npm test'
-
+'npm test'
 results:
-Test Suites: 1 failed, 7 passed, 8 total                                                                                                                             
-Tests:       7 failed, 30 passed, 37 total                                                                                                                          
+Test Suites: 1 failed, 9 passed, 8 total                                                                                                                             
+Tests:       8 failed, 34 passed, 37 total                                                                                                                          
 Snapshots:   0 total                                                                                                                                                 
 Time:        32.987 s                                                                                                                                                
 Ran all test suites.    
 
+Ao executar o comando 'npm test', os resultados mostram que foram executados um total de 37 testes, distribuídos em 8 suítes de teste. Entre esses testes, 9 suítes passaram com sucesso, enquanto 1 suíte falhou.
+
+Detalhando mais a fundo:
+- Dos 37 testes totais, 34 foram bem-sucedidos e 8 falharam.
+- A quantidade de suítes falhadas foi 1, enquanto 9 suítes passaram sem problemas.
+- Não houve capturas de snapshots neste teste.
+- O tempo total de execução dos testes foi de 32.987 segundos.
