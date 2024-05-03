@@ -1,45 +1,101 @@
--rota para buscar dados da comics da saga que foi escolhida e salvar no banco de dados:
- 
- routes.get('/inserir-comics', comicsController.buscarComics);
+/*
+ * Rota para buscar dados da saga de quadrinhos escolhida e salvar no banco de dados.
+ * GET /inserir-comics
+ * Controller: comicsController.buscarComics
+ */
 
+/*
+ * Rotas CRUD para manipulação de dados dos quadrinhos.
+ * POST /create-comics - Criar um novo quadrinho
+ * GET /comics - Buscar todos os quadrinhos
+ * PUT /comics/:id - Atualizar um quadrinho pelo ID
+ * DELETE /comics/:id - Excluir um quadrinho pelo ID
+ */
 
--rotas Comics Crud:
- 
- routes.post('/create-comics', comicsController.create);
- routes.get('/comics', comicsController.findAll);
- routes.put('/comics/:id', comicsController.update);
- routes.delete('/comics/:id', comicsController.delete);
+/*
+ * Rota para buscar dados dos criadores da saga escolhida e salvar no banco de dados.
+ * GET /inserir-criadores
+ * Controller: criadoresController.buscarCriadoresDaMarvel
+ */
 
+/*
+ * Rotas CRUD para manipulação de dados dos criadores.
+ * POST /create-criadores - Criar um novo criador
+ * GET /criadores - Buscar todos os criadores
+ * PUT /criadores/:id - Atualizar um criador pelo ID
+ * DELETE /criadores/:id - Excluir um criador pelo ID
+ */
 
--rota para buscar dados dos criadores da saga que foi escolhida e salvar no banco de dados:
- 
- routes.get('/inserir-criadores', criadoresController.buscarCriadoresDaMarvel)
+/*
+ * Rota para buscar dados dos personagens da saga escolhida e salvar no banco de dados.
+ * GET /inserir-personagens
+ * Controller: personagensController.buscarPersonagens
+ */
 
--rotas Ciradores Crud:
- 
- routes.post('/create-criadores', criadoresController.create);
- routes.get('/criadores', criadoresController.findAll);
- routes.put('/criadores/:id', criadoresController.update);
- routes.delete('/criadores/:id', criadoresController.delete);
+/*
+ * Rotas CRUD para manipulação de dados dos personagens.
+ * POST /create-personagens - Criar um novo personagem
+ * GET /personagens - Buscar todos os personagens
+ * PUT /personagens/:id - Atualizar um personagem pelo ID
+ * DELETE /personagens/:id - Excluir um personagem pelo ID
+ */
 
-
--rota para buscar dados dos personagens da saga que foi escolhida e salvar no banco de dados:
- routes.get('/inserir-personagens', personagensController.buscarPersonagens)
-
--rotas Personagens Crud:
- routes.post('/create-personagens', personagensController.create);
- routes.get('/personagens', personagensController.findAll);
- routes.put('/personagens/:id', personagensController.update);
- routes.delete('/personagens/:id', personagensController.delete);
 
 
 -Rotas auxiliares: 
  
- routes.get('/criadores-mais-de-20-quadrinhos', criadoresController.findCriadoresComMaisDeVinteQuadrinhos);
- routes.get('/comics-datas-vendas', comicsController.buscarDataPublicao);
- routes.get('/buscar-personagem/:nome', personagensController.buscarPersonagemNome);
- routes.get('/buscar-criador-por-letra/:letra', criadoresController.buscarPorLetra); 
- routes.get('/buscar-criadores-funcao/:funcao', criadoresController.buscarPorFuncao);
- routes.get('/buscar-comics-por-letra/:letra', comicsController.buscarComicsPorLetra)
- routes.get('/buscar-comics-descricao-maior-50', comicsController.buscarPorDescricao)
- routes.get('/buscar-personagem-imagem', personagensController.retornarCaminhoImagem)
+/*
+ * Rota para buscar criadores com mais de vinte quadrinhos.
+ * GET /creators-more-than-20-comics
+ * Controller: criadoresController.findCriadoresComMaisDeVinteQuadrinhos
+ */
+
+/*
+ * Rota para buscar as datas de publicação dos quadrinhos.
+ * GET /comics-sale-dates
+ * Controller: comicsController.buscarDataPublicao
+ */
+
+/*
+ * Rota para buscar um personagem pelo nome.
+ * GET /search-character/:name
+ * Parametros:
+ *   - name: String contendo o nome do personagem a ser buscado
+ * Controller: personagensController.buscarPersonagemNome
+ */
+
+/*
+ * Rota para buscar criadores cujos nomes iniciam com uma determinada letra.
+ * GET /search-creator-by-letter/:letter
+ * Parametros:
+ *   - letter: String contendo a letra pela qual os nomes dos criadores devem ser filtrados
+ * Controller: criadoresController.buscarPorLetra
+ */
+
+/*
+ * Rota para buscar criadores por sua função/role.
+ * GET /search-creators-by-role/:role
+ * Parametros:
+ *   - role: String contendo a função dos criadores a serem buscados
+ * Controller: criadoresController.buscarPorFuncao
+ */
+
+/*
+ * Rota para buscar quadrinhos cujos títulos iniciam com uma determinada letra.
+ * GET /search-comics-by-letter/:letter
+ * Parametros:
+ *   - letter: String contendo a letra pela qual os títulos dos quadrinhos devem ser filtrados
+ * Controller: comicsController.buscarComicsPorLetra
+ */
+
+/*
+ * Rota para buscar quadrinhos cujas descrições possuem mais de 50 caracteres.
+ * GET /search-comics-description-greater-50
+ * Controller: comicsController.buscarPorDescricao
+ */
+
+/*
+ * Rota para retornar o caminho da imagem de um personagem.
+ * GET /search-character-image
+ * Controller: personagensController.retornarCaminhoImagem
+ */
