@@ -1,0 +1,22 @@
+/* comicsController
+  Controlador responsável por manipular requisições relacionadas aos quadrinhos (comics).
+ 
+  Este controlador utiliza o serviço comicsService para interagir com o banco de dados e realizar operações CRUD
+  sobre os quadrinhos.
+ */
+
+
+/* criadoresController 
+  Controlador para manipular requisições relacionadas aos criadores de quadrinhos.
+  
+  Este controlador utiliza o serviço criadoresService para interagir com o banco de dados e realizar operações CRUD
+  sobre os criadores de quadrinhos.
+ */
+
+
+/* personagensController
+  Controlador para manipular requisições relacionadas aos personagens da Marvel.
+  
+  Este controlador utiliza o serviço personagensService para interagir com o banco de dados e realizar operações CRUD
+  sobre os personagens da Marvel.
+ */
